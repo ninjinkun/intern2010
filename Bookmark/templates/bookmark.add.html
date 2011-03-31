@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>ブックマーク作成</title>
+</head>
+<body>
+<h1>ブックマーク作成</h1>
+<form method="POST" action="/bookmark.add">
+<dl>
+    <dt>URL</dt>
+    <dd><input type="text" name="url"></dd>
+    <dt>Comment</dt>
+    <dd><input type="text" name="comment"></dd>
+</dl>
+<p><input type="submit"></p>
+</form>
+[% INCLUDE footer.html %]
+</body> </html>

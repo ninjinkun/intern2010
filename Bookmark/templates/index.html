@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>[% r.user.name | html %]のブックマーク一覧</title>
+</head>
+
+<body>
+<h1>[% r.user.name | html %]のブックマーク一覧</h1>
+<ul>
+[%- FOREACH bookmark IN bookmarks.reverse %]
+    <li><a href="/bookmark/[% bookmark.id %]">[% bookmark.as_string | html %]</a></li>
+[%- END %]
+</ul>
+[% INCLUDE footer.html %]
+</body> </html>

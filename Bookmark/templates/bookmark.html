@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>[% bookmark.entry.title | html %]</title>
+</head>
+
+<body>
+<h1>[% bookmark.entry.title | html %]</h1>
+[% bookmark.as_string | html %]
+
+<form method="POST" action="/bookmark.delete">
+    <input type="hidden" name="entry_id" value="[% bookmark.entry.id | html %]">
+    <input type="submit" value="削除">
+</form>
+
+[% INCLUDE footer.html %]
+</body> </html>
